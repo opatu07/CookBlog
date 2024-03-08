@@ -1,11 +1,19 @@
 @extends('layout')
+
+@section('title', 'Add')
+
+@section('menubar')
+    @parent
+    新規作成ページ
+    <a href=/show>記事一覧へ</a>
+@endsection
+
 @section('content')
-    <p>{{ $msg }}</p>
 
     @if (count($errors) > 0)
         <p>入力に問題があります。再入力してください。</p>
     @endif
-    <form action="/CreateAccount" method="post">
+    <form action="/create" method="post">
         <table>
             @csrf
             @error('username')
@@ -75,3 +83,8 @@
         </table>
     </form>
 @endsection
+
+@section('footer')
+copyright 2023 nishi.
+@endsection
+

@@ -13,6 +13,9 @@
         <!-- Styles -->
     </head>
     <body>
+        @yield('title')
+        @yield('menubar')
         @yield('content')
+        @yield('footer')
     </body>
 </html>
