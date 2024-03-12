@@ -13,6 +13,7 @@
         <!-- Styles -->
     </head>
     <body>
-        @yield('content')
+        <a href="/login">ログイン</a>または
+        <a href="register">登録</a>
     </body>
 </html>

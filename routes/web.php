@@ -1,7 +1,5 @@
 <?php
 
-
-use App\Http\Controllers\CreateAccountController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
 
-Route::get('CreateAccount',[CreateAccountController::class,'index']);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::post('CreateAccount',[CreateAccountController::class,'post']);
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
