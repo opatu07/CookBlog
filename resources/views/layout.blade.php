@@ -13,9 +13,7 @@
         <!-- Styles -->
     </head>
     <body>
-        @yield('title')
-        @yield('menubar')
-        @yield('content')
-        @yield('footer')
+        <a href="/login">ログイン</a>または
+        <a href="register">登録</a>
     </body>
 </html>
