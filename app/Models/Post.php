@@ -11,6 +11,10 @@ class Post extends Model
 
     protected $with = ['category', 'author'];
 
+    protected $fillable = ['title', 'user_id', 'category_id','slug', 'excerpt', 'body'];
+
+
+
     public function scopeFilter($query, array $filters)
     {
         $query->when($filters['search'] ?? false, fn($query, $search) =>

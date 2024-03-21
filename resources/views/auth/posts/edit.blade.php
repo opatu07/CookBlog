@@ -1,6 +1,6 @@
-<x-layout>
+<x-app>
     <x-setting :heading="'投稿内容を編集する タイトル: ' . $post->title">
-        <form method="POST" action="/admin/posts/{{ $post->id }}" enctype="multipart/form-data">
+        <form method="POST" action="/posts/edit" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
 
@@ -36,4 +36,4 @@
             <x-form.button>Update</x-form.button>
         </form>
     </x-setting>
-</x-layout>
+</x-app>

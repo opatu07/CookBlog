@@ -1,6 +1,6 @@
 <x-app>
     <x-setting heading="新規投稿">
-        <form method="POST" action="/admin/posts" enctype="multipart/form-data">
+        <form method="POST" action="/posts/create" enctype="multipart/form-data">
             @csrf
 
             <x-form.input name="title" required/>

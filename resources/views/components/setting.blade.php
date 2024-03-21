@@ -11,11 +11,11 @@
 
             <ul>
                 <li>
-                    <a href="/auth/posts/index" class="{{ request()->is('auth/posts/index') ? 'text-blue-500' : '' }}">全ての投稿</a>
+                    <a href="/posts/index" class="{{ request()->is('/posts/index') ? 'text-blue-500' : '' }}">全ての投稿</a>
                 </li>
 
                 <li>
-                    <a href="/auth/posts/create" class="{{ request()->is('auth/posts/create') ? 'text-blue-500' : '' }}">新しい記事を作る</a>
+                    <a href="/posts/create" class="{{ request()->is('/posts/create') ? 'text-blue-500' : '' }}">新しい記事を作る</a>
                 </li>
             </ul>
         </aside>

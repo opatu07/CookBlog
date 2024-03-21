@@ -25,14 +25,14 @@ class PostController extends Controller
         Post::create(array_merge($this->validatePost(), [
             'user_id' => request()->user()->id,
             'thumbnail' => request()->file('thumbnail')->store('thumbnails') 
-        ]));
+        ])); 
 
-        return redirect('/');
+        return redirect('/posts/create');
     }
 
     public function edit(Post $post)
     {
-        return view('admin/posts/edit', ['post' => $post]);
+        return view('auth/posts/edit', ['post' => $post]);
     }
 
     public function update(Post $post)
